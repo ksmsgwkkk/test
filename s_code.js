@@ -5,10 +5,7 @@
 /*-----v20240115-----*/
 
 sc_measurementDomains =[
-    "xn--pckua2a7gp15o89zb.com",
-    "求人ボックス.com",
-    "recruit.xn--pckua2a7gp15o89zb.com",
-    "recruit.求人ボックス.com"
+    "ksmsgwkkk.github.io",
 ];
 
 if(sc_measurementDomains.indexOf(location.hostname) != -1){
