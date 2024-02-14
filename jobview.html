@@ -475,6 +475,55 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+
         s.events= events;
         s.tl(this,'o',s.prop1);
     }
+function onclickcatalyst_buttonclick(buttontype, flag, jobid, clicklocation) {
+    catalyst.refresh();
+    var s = s_gi(s_account);
+    s.linkTrackVars = "channel,prop1,prop56,prop57,prop58,prop71,eVar31,eVar50,eVar76,eVar78,eVar84";
+    s.linkTrackEvents = "";
+    s.channel = "ボタンクリック";
+    s.prop1 = "BC_" + buttontype;
+    if (buttontype == '詳細検索' || buttontype == '応募フォーム') {
+        s.prop1 = buttontype;
+    }
+    s.prop56 = catalyst.getHistoryParam();
+    s.prop57 = catalyst.getFavoriteParam();
+    s.prop58 = flag;
+    if (buttontype == '応募送信') {
+        s.prop58 = catalyst.getCheckboxState(flag);
+    }
+    if (catalyst.isAndroid) {
+        s.prop71 = 'app';
+    }
+    s.eVar31 = jobid;
+    s.eVar50 = clicklocation;
+    if (buttontype == 'HDメニュー') {
+        s.eVar76 = 'middle_0002';
+    }
+    s.eVar78 = catalyst.getCookieUha();
+    s.eVar84 = catalyst.getAndroidFid();
+    s.tl(this, 'o', s.prop1);
+}
+
+function onclickcatalyst_buttonclick_appbanner(buttontype, flag, jobid, clicklocation, appbanner) {
+    catalyst.refresh();
+    var s = s_gi(s_account);
+    s.linkTrackVars = "channel,prop1,prop56,prop57,prop58,prop71,eVar31,eVar50,eVar76,eVar78,eVar84";
+    s.linkTrackEvents = "";
+    s.channel = "ボタンクリック";
+    s.prop1 = "BC_" + buttontype;
+    s.prop56 = catalyst.getHistoryParam();
+    s.prop57 = catalyst.getFavoriteParam();
+    s.prop58 = flag;
+    if (catalyst.isAndroid) {
+        s.prop71 = 'app';
+    }
+    s.eVar31 = jobid;
+    s.eVar50 = clicklocation;
+    s.eVar76 = appbanner;
+    s.eVar78 = catalyst.getCookieUha();
+    s.eVar84 = catalyst.getAndroidFid();
+    s.tl(this, 'o', s.prop1);
+}
 
     function addFavStyle() {
         $('a.s-detailsec_fav:not(.is-fav)').each(function() {
