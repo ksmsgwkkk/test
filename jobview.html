@@ -135,7 +135,7 @@
         </div>
         <div class="p-appImgBnr_txtWrap">
             <p class="p-appImgBnr_txt p-appImgBnr_pushIcon">新着求人を見逃さない</p>
-            <a href="https://kyujinbox.onelink.me/H8dE?af_xp=custom&amp;pid=kyujin_sp&amp;c=bottom_0014&amp;af_ad=%E6%B1%82%E4%BA%BA%E8%A9%B3%E7%B4%B0" class="p-appImgBnr_btn" id="s-appImgBnr_btn_url" onclick="onclickcatalyst_buttonclick_appbanner('アプリバナークリック', 'GooglePlayStoreリンク', 'a99578e6ce6792f5edb882b8daa5d215', catalyst.originPageProp, 'bottom_0014');">アプリで開く</a>
+            <a href="https://kyujinbox.onelink.me/H8dE?af_xp=custom&amp;pid=kyujin_sp&amp;c=bottom_0014&amp;af_ad=%E6%B1%82%E4%BA%BA%E8%A9%B3%E7%B4%B0" class="p-appImgBnr_btn" id="s-appImgBnr_btn_url" onclick="onclickcatalyst_detail_alliancelink('アプリバナークリック', 'GooglePlayStoreリンク', 'a99578e6ce6792f5edb882b8daa5d215', catalyst.originPageProp, 'bottom_0014');">アプリで開く</a>
         </div>
     </div>
 </div>
@@ -454,57 +454,7 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+
         s.tl(this,'o',s.prop1);
     }
 
-    function onclickcatalyst_detail_alliancelink(jobid,clicklocation) {
-        catalyst.refresh();
-        var eventList = ['event5'];
-        if (catalyst.isFav(jobid)) {
-            eventList.push('event105');
-        }
-        events = eventList.join(',');
-        var s=s_gi(s_account);
-        s.linkTrackVars ="channel,prop1,prop56,prop57,prop71,eVar50,eVar78,eVar84,events";
-        s.linkTrackEvents = events;
-        s.channel = "提携先リンククリック";
-        s.prop1 = "提携先リンククリック";
-        s.prop56= catalyst.getHistoryParam();
-        s.prop57= catalyst.getFavoriteParam();
-        if (catalyst.isAndroid) s.prop71 = 'app';
-        s.eVar50= "求人詳細,tb," + clicklocation;
-        s.eVar78 = catalyst.getCookieUha();
-        s.eVar84 = catalyst.getAndroidFid();
-        s.events= events;
-        s.tl(this,'o',s.prop1);
-    }
-function onclickcatalyst_buttonclick(buttontype, flag, jobid, clicklocation) {
-    catalyst.refresh();
-    var s = s_gi(s_account);
-    s.linkTrackVars = "channel,prop1,prop56,prop57,prop58,prop71,eVar31,eVar50,eVar76,eVar78,eVar84";
-    s.linkTrackEvents = "";
-    s.channel = "ボタンクリック";
-    s.prop1 = "BC_" + buttontype;
-    if (buttontype == '詳細検索' || buttontype == '応募フォーム') {
-        s.prop1 = buttontype;
-    }
-    s.prop56 = catalyst.getHistoryParam();
-    s.prop57 = catalyst.getFavoriteParam();
-    s.prop58 = flag;
-    if (buttontype == '応募送信') {
-        s.prop58 = catalyst.getCheckboxState(flag);
-    }
-    if (catalyst.isAndroid) {
-        s.prop71 = 'app';
-    }
-    s.eVar31 = jobid;
-    s.eVar50 = clicklocation;
-    if (buttontype == 'HDメニュー') {
-        s.eVar76 = 'middle_0002';
-    }
-    s.eVar78 = catalyst.getCookieUha();
-    s.eVar84 = catalyst.getAndroidFid();
-    s.tl(this, 'o', s.prop1);
-}
-
-function onclickcatalyst_buttonclick_appbanner(buttontype, flag, jobid, clicklocation, appbanner) {
+    function onclickcatalyst_detail_alliancelink(buttontype, flag, jobid, clicklocation, appbanner) {
     catalyst.refresh();
     var s = s_gi(s_account);
     s.linkTrackVars = "channel,prop1,prop56,prop57,prop58,prop71,eVar31,eVar50,eVar76,eVar78,eVar84";
@@ -523,7 +473,8 @@ function onclickcatalyst_buttonclick_appbanner(buttontype, flag, jobid, clickloc
     s.eVar78 = catalyst.getCookieUha();
     s.eVar84 = catalyst.getAndroidFid();
     s.tl(this, 'o', s.prop1);
-}
+    }
+    
 
     function addFavStyle() {
         $('a.s-detailsec_fav:not(.is-fav)').each(function() {
