@@ -85,6 +85,7 @@ function s_doPlugins(s) {
     if(s.prop28) s.eVar28="D=c28";
     if(s.prop29) s.eVar29="D=c29";
     if(s.prop30) s.eVar30="D=c30";
+    if(s.prop31 && !s.prop1.match(/BC_お気に入り.+/)) s.eVar31="D=c31";
     if(s.prop32) s.eVar32="D=c32";
     if(s.prop38) s.eVar38="D=c38";
     if(s.prop39) s.eVar39="D=c39";
