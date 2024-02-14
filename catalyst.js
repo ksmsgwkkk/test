@@ -21,7 +21,7 @@ var catalyst = {
         this.getIsSessionStorageAvailable();
         this.getSearchHistory();
         this.getViewHistory();
-        this.getFavoriteList();
+        this.getFavoriteList();	
         this.getSaveCondition();
         this.getIsAndroid();
         this.getCookieUha();
@@ -410,7 +410,6 @@ function onclickcatalyst_buttonclick(buttontype, flag, jobid, clicklocation) {
 }
 
 function onclickcatalyst_buttonclick_appbanner(buttontype, flag, jobid, clicklocation, appbanner) {
-    catalyst.refresh();
     var s = s_gi(s_account);
     s.linkTrackVars = "channel,prop1,prop56,prop57,prop58,prop71,eVar31,eVar50,eVar76,eVar78,eVar84";
     s.linkTrackEvents = "";
