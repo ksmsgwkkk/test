@@ -113,7 +113,7 @@ function s_doPlugins(s) {
 
 	/* getQueryParam config variables */
     s.campaign=s.Util.getQueryParam('cid');
-    s.eVar52=s.Util.getQueryParam('lid');
+    s.eVar52 = s.Util.getQueryParam('bid') || s.Util.getQueryParam('lid');
 
 	/* getTimeParting config variables */
     s.dstStart="1/1/2008";
