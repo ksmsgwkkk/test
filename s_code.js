@@ -2,7 +2,7 @@
  Copyright 1996-2016 Adobe, Inc. All Rights Reserved
  More info available at http://www.adobe.com/marketing-cloud.html */
 
-/*-----v20240115-----*/
+/*-----v20240903-----*/
 
 sc_measurementDomains =[
     "ksmsgwkkk.github.io",
