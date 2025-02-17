@@ -12,9 +12,6 @@
 <a href = "#" onclick="onclickcatalyst_halfmodal('ちゃんねる', 'ぷろっぷ１', 'ごじゅはち');">   あああああ</a>
 
     
-<footer class="s-scrollFixFooter">
-    <p class="footerCopy">&copy; Kakaku.com, Inc.</p>
-</footer>
 
 <!-- SiteCatalyst code version: H.8.
 Copyright 1997-2006 Omniture, Inc. More info available at
@@ -35,6 +32,19 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+
 //--></script>
 <!--/DO NOT REMOVE/-->
 <!-- End SiteCatalyst code version: H.8. -->
+
+function onclickcatalyst_halfmodal(sitesection,prop1,flg){
+    catalyst.refresh();
+    var s=s_gi(s_account);
+    s.linkTrackVars ="channel,prop1,prop32,eVar32,eVar78,events";
+    s.linkTrackEvents="";
+    s.channel = "sitesection";
+    s.prop1 = "prop1";
+    s.prop56 = catalyst.getHistoryParam();
+    s.prop57 = catalyst.getFavoriteParam();    
+    s.prop58 = flg;
+    s.tl(this,'o',s.prop1);
+}
 
 </body>
 </html>
