@@ -1,24 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
 </head>
 <body class="c-renewalBody">
 <header>
 </header>
 <body>
 
-<a href = "#" onclick="onclickcatalyst_halfmodal('ちゃんねる', 'ぷろっぷ１', 'ごじゅはち');">   あああああ</a>
+<a href="#" onclick="onclickcatalyst_halfmodal('ちゃんねる', 'ぷろっぷ１', 'ごじゅはち');">あああああ</a>
 
-    
-
-<!-- SiteCatalyst code version: H.8.
-Copyright 1997-2006 Omniture, Inc. More info available at
-http://www.omniture.com -->
+<!-- SiteCatalyst code version: H.8. -->
 <script language="JavaScript" src="https://ksmsgwkkk.github.io/test/s_code.js"></script>
 
-<script language="JavaScript"><!--
+<script language="JavaScript">
 /* You may give each page an identifying name, server, and channel on
 the next lines. */
 s.pageName= "[matome]" + window.location;
@@ -26,25 +20,26 @@ s.channel = "データめサイト";
 s.prop1 = "FAQ";
 /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
 var s_code=s.t();if(s_code)document.write(s_code);
-//--></script>
-<script language="JavaScript"><!--
+</script>
+<script language="JavaScript">
 if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
-//--></script>
+</script>
 <!--/DO NOT REMOVE/-->
 <!-- End SiteCatalyst code version: H.8. -->
 
-function onclickcatalyst_halfmodal(sitesection,prop1,flg){
+<script_halfmodal(sitesection, prop1, flg) {
     catalyst.refresh();
-    var s=s_gi(s_account);
-    s.linkTrackVars ="channel,prop1,prop32,eVar32,eVar78,events";
-    s.linkTrackEvents="";
-    s.channel = "sitesection";
-    s.prop1 = "prop1";
+    var s = s_gi(s_account);
+    s.linkTrackVars = "channel,prop1,prop32,eVar32,eVar78,events";
+    s.linkTrackEvents = "";
+    s.channel = sitesection;
+    s.prop1 = prop1;
     s.prop56 = catalyst.getHistoryParam();
-    s.prop57 = catalyst.getFavoriteParam();    
+    s.prop57 = catalyst.getFavoriteParam();
     s.prop58 = flg;
-    s.tl(this,'o',s.prop1);
+    s.tl(this, 'o', s.prop1);
 }
+</script>
 
 </body>
 </html>
